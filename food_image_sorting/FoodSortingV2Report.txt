@@ -1,0 +1,32 @@
+Optimizer: Adam
+Loss: Categorical CrossEntropy
+
+Full Model:
+    model = keras.Sequential([
+        layers.Input(shape=(224, 224, 3)),
+        layers.Conv2D(3, (1, 1), padding='same'),
+        base,
+        layers.GlobalAveragePooling2D(),
+        layers.Dense(128, activation='relu'),
+        layers.Dense(num_classes, activation='softmax', dtype='float32')
+    ])
+
+📦 Building model: EfficientNetB0
+Epoch 7/10
+302/302 ━━━━━━━━━━━━━━━━━━━━ 312s 1s/step - accuracy: 0.0982 - loss: 2.9548 - val_accuracy: 0.0988 - val_loss: 2.9497
+
+📦 Building model: MobileNetV2
+Epoch 10/10
+302/302 ━━━━━━━━━━━━━━━━━━━━ 330s 1s/step - accuracy: 0.6599 - loss: 1.1505 - val_accuracy: 0.6238 - val_loss: 1.2716
+
+📦 Building model: ResNet50
+Epoch 10/10
+302/302 ━━━━━━━━━━━━━━━━━━━━ 309s 1s/step - accuracy: 0.2031 - loss: 2.6765 - val_accuracy: 0.2074 - val_loss: 2.6763
+
+📦 Building model: VGG16
+Epoch 10/10
+302/302 ━━━━━━━━━━━━━━━━━━━━ 326s 1s/step - accuracy: 0.4157 - loss: 2.0241 - val_accuracy: 0.4203 - val_loss: 2.0219
+
+📦 Building model: InceptionV3
+Epoch 10/10 
+302/302 ━━━━━━━━━━━━━━━━━━━━ 308s 1s/step - accuracy: 0.5878 - loss: 1.3757 - val_accuracy: 0.5611 - val_loss: 1.4726
